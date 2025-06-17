@@ -1,11 +1,8 @@
 # ReqClientBase
 
-**TODO: Add description**
+Is a macro that can be used to provided a base implementation of [Req](https://hexdocs.pm/req/readme.html) get, post, put, patch and delete http calls configured with telemetry and a circuit breaker.
 
 ## Installation
-
-If [available in Hex](https://hex.pm/docs/publish), the package can be installed
-by adding `req_client_base` to your list of dependencies in `mix.exs`:
 
 ```elixir
 def deps do
@@ -15,7 +12,14 @@ def deps do
 end
 ```
 
-Documentation can be generated with [ExDoc](https://github.com/elixir-lang/ex_doc)
-and published on [HexDocs](https://hexdocs.pm). Once published, the docs can
-be found at <https://hexdocs.pm/req_client_base>.
+## Example
 
+```elixir
+defmodule Some.Http.Client do
+  use ReqClientBase, service_name: :some_client
+
+  def client_call do
+    get(url: "https://some.url")
+  end
+end
+```
