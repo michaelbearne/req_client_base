@@ -1,6 +1,9 @@
 defmodule ReqClientBase do
+  @external_resource readme = Path.join([__DIR__, "../README.md"])
+  @doc_readme File.read!(readme)
+
   @moduledoc """
-  Documentation for `ReqClientBase`.
+  #{@doc_readme}
   """
 
   defmacro __using__(opts) do
