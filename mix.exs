@@ -2,7 +2,7 @@ defmodule ReqClientBase.MixProject do
   use Mix.Project
 
   @version "0.1.0"
-  @source_url "https://github.com/dualohq/req_client_base"
+  @source_url "https://github.com/michaelbearne/req_client_base"
 
   def project do
     [
@@ -45,8 +45,7 @@ defmodule ReqClientBase.MixProject do
       name: "req_client_base",
       maintainers: ["Michael Bearne"],
       links: %{"GitHub" => @source_url},
-      licenses: ["SEE LICENSE IN LICENSE"],
-      organization: "dualo"
+      licenses: ["MIT"]
     ]
   end
 
