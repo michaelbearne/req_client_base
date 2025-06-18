@@ -6,6 +6,9 @@ publish:
 outdated:
   mix hex.outdated
 
+docs:
+  mix docs
+
 remove-unused-deps:
   mix deps.clean --unused 
   mix deps.clean --unlock --unused
